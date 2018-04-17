@@ -12,14 +12,14 @@ var OBJECT_PLAYER = 1,
 	OBJECT_POWERUP = 16;
 
 var sprites = {
-	ship: { sx:0, sy:0, w:32, h:16, frames:0 },
-	missile: { sx:160, sy:0, w:6, h:13, frames:0 },
-	enemy_left: { sx:32, sy:0, w:32, h:32, frames:0 },
-	enemy_pound: { sx:64, sy:0, w:32, h:32, frames:0 },
-	enemy_hat: { sx:96, sy:0, w:32, h:32, frames:0 },
-	enemy_right: { sx:128, sy:0, w:32, h:32, frames:0 },
+	ship: { sx:0, sy:0, w:34, h:32, frames:0 },
+	missile: { sx:185, sy:0, w:15, h:11, frames:0 },
+	enemy_left: { sx:34, sy:0, w:34, h:32, frames:0 },
+	enemy_pound: { sx:68, sy:0, w:34, h:32, frames:0 },
+	enemy_hat: { sx:102, sy:0, w:34, h:32, frames:0 },
+	enemy_right: { sx:136, sy:0, w:34, h:32, frames:0 },
 	explosion: { sx:0, sy:32, w:63, h:63, frames:12},
-	enemy_missile: {sx:166, sy:0, w:6, h:13, frames:0 }
+	enemy_missile: {sx:170, sy:0, w:15, h:11, frames:0 }
 };
 
 
@@ -39,7 +39,7 @@ var startGame = function() {
 	Game.setBoard(0, new Starfield(20, 0.4, 100, true));
 	Game.setBoard(1, new Starfield(50, 0.6, 100));
 	Game.setBoard(2, new Starfield(100, 1, 50));
-	Game.setBoard(3, new TitleScreen("Squid Invasion", "Press fire to start playing", playGame));
+	Game.setBoard(3, new TitleScreen("Kiiroitori Fight", "Press fire to start playing", playGame));
 }
 
 
@@ -74,7 +74,7 @@ var Starfield = function(speed, opacity, numStars, clear){
 	var offset = 0;
 	
 	if(clear) {
-		starCtx.fillStyle = "#035aea";
+		starCtx.fillStyle = "#fbc733";
 		starCtx.fillRect(0, 0, stars.width, stars.height);
 	}
 	

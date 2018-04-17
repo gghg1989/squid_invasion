@@ -1,2 +1,2 @@
-# squid_invasion
-Squid version of alien invasion
+# Rilakkuma_invasion
+Kiiroitori version of alien invasion
